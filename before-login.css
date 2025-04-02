@@ -1,0 +1,165 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url(foto-bg2.jpg); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(33, 22, 22, 0.271); /* Fondo más claro y translúcido */
+    backdrop-filter: blur(10px); /* Efecto glass */
+    -webkit-backdrop-filter: blur(10px); /* Para Safari */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Borde sutil */
+}
+
+.navbar-logo img {
+    margin: 0;
+    padding: 0;
+    height: 37px;
+    filter: drop-shadow(0 0 5px rgba(31, 36, 36, 0.5)); 
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0 15px;
+    transition: color 0.3s ease, letter-spacing 0.3s ease, font-size 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #00ff66; 
+    letter-spacing: 1.5px;
+    font-size: 1.2rem;
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 60px; /* Espacio para el navbar */
+}
+
+.second-container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 20px;
+}
+
+/* ---------------------Sección de marketing con efecto glass mejorado ---------*/
+.marketing-section {
+    text-align: center;
+    background:rgba(33, 22, 22, 0.271); /* Fondo más claro y menos sombrío */
+    backdrop-filter: blur(15px); /* Efecto de desenfoque mejorado */
+    -webkit-backdrop-filter: blur(15px); /* Para Safari */
+    padding: 80px 80px;
+    border-radius: 20px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 0 10px rgba(46, 157, 172, 0.1); /* Sombra con un poco del color del logo */
+    color: #00e1ff; /* Mantiene el color del texto */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Borde sutil para reforzar el efecto glass */
+    position: relative;
+    overflow: hidden; /* Para el efecto de reflejo */
+}
+
+/* ------------------------Efecto de reflejo para mejorar el glass--------------------- */
+.marketing-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(43, 28, 28, 0.337) 0%, rgba(255,255,255,0) 60%);
+    transform: rotate(30deg);
+    pointer-events: none;
+}
+
+.marketing-title {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.marketing-subtitle {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.marketing-text {
+    font-size: 1.4rem;
+    margin: 25px 0;
+    color: #ffffff; /* Mantiene el color del texto secundario */
+}
+
+.marketing-cta {
+    background: #00e1ff;
+    color: white;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.marketing-cta:hover {
+    background: #32c6ab; /* Mantiene el color más oscuro al hacer hover */
+    transform: translateY(-2px); /* Mantiene el efecto de elevación */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        margin: 0 10px;
+    }
+
+    .marketing-section {
+        padding: 40px 40px;
+    }
+
+    .marketing-title {
+        font-size: 2rem;
+    }
+
+    .marketing-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .marketing-text {
+        font-size: 1.2rem;
+    }
+
+    .marketing-cta {
+        padding: 12px 40px;
+        font-size: 1rem;
+    }
+}

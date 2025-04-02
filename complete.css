@@ -1,0 +1,234 @@
+
+/* Estilos base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Formulario */
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1em;
+}
+
+.btn-submit {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    form {
+        padding: 1.5rem;
+    }
+}
+
+/* ----diseño para el side-bar comienzo---------- */
+/* ===== Navbar lateral ===== */
+.sidebar {
+    width: 250px;
+    background-color: #fff; /* Color blanco */
+    color: black;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0; /* Menú visible por defecto */
+    transition: left 0.8s ease; /* Animación para abrir/cerrar */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.sidebar.closed {
+    left: -250px; /* Oculta la barra lateral cuando tiene la clase "closed" */
+}
+
+.sidebar.open {
+    left: 0; /* Muestra la barra lateral cuando tiene la clase "open" */
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #dedede;
+}
+
+/* ----------------------- Logo en el sidebar -------------------------- */
+.sidebar-logo {
+    width: 250px; /* Ajusta el tamaño según lo necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin: 0 auto 20px; /* Centra la imagen y añade un margen inferior */
+}
+
+/* ===== Botón de menú hamburguesa ===== */
+#menu-toggle {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 0px; /* Ajustamos la posición a la izquierda */
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; /* Asegura que esté por encima de la barra lateral */
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+/* Ajustes adicionales para el botón cuando el menú está cerrado */
+.sidebar.closed + #menu-toggle {
+    left: 20px; /* Mantén el botón en su posición cuando el menú está cerrado */
+}
+
+/* ------------------- CERRAR SESIÓN ---------------------------- */
+.btncerrar {
+    color: red;
+    padding: 10px;
+    text-decoration: none;
+    letter-spacing: 0.8px;
+    font-weight: bolder;
+    transition: color 0.7s ease;
+    align-self: flex-start; /* Alinea el botón a la izquierda */
+}
+
+.btncerrar:hover {
+    color: darkred; /* Cambia el color al pasar el mouse */
+}
+
+.btncerrar i, .btncerrar box-icon {
+    margin-left: 8px; /* Ajusta el espacio entre el texto y el icono */
+}
+
+/* Estilo Hero con Flexbox */
+.hero-complete {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;     /* Centra horizontalmente */
+    text-align: center;     /* Alinea el texto internamente */
+    min-height: 280px;      /* Altura mínima para centrado efectivo */
+    padding: 2rem;     /* Espaciado interno */
+    background: linear-gradient(135deg, #2e9eac, #207a88);
+    color: white;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.hero-complete h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 0
+}
+
+.hero-complete p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Onda decorativa */
+.wave-complete {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23ffffff"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23ffffff"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff"/></svg>') no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 768px) {
+    .sidebar { width: 210px;
+                background-color: #ffffffd3;
+        }
+    .sidebar.closed { left: -200px; }
+    .sidebar-logo { width: 180px; }
+
+    #menu-toggle { font-size: 1.2rem; }
+}
+}

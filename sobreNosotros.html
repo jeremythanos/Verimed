@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sobreNosotros.css">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Botón para abrir/cerrar el menú en móviles -->
+    <button id="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <div class="wrapper">
+        <!-- ===== Sidebar lateral ===== -->
+        <nav id="sidebar" class="sidebar closed">
+            <img src="logo.png" alt="Logo de VeriMed" class="sidebar-logo">
+            <h2>VeriMed</h2>
+            <ul>
+                <li><a href="index-test.html"><i class='bx bx-home'></i> Inicio</a></li>
+                <li><a href="complete.html"><i class='bx bx-user'></i> Completa tu Información</a></li>
+                <li><a href="miperfil-test.html"><i class='bx bx-id-card'></i> Mi Perfil</a></li>
+                <li><a href="sobreNosotros.html"><i class='bx bx-info-circle'></i> Sobre Nosotros</a></li>
+            </ul>
+            <a id="btnCerrarSesion" class="btncerrar" href="login-test.html">
+                <i class='bx bx-log-out'></i> Cerrar sesión
+            </a>
+        </nav>
+        <img src="" alt="">
+
+        <!-- ===== Contenido principal ===== -->
+        <div class="container">
+            <!-- Sección Hero -->
+            <section class="hero">
+                <h1>Nuestra Misión</h1>
+                <p>En VeriMed, nos dedicamos a simplificar tu experiencia médica con tecnología segura y accesible.</p>
+                <div class="wave"></div>
+            </section>
+
+            <!-- Sección Equipo -->
+            <section class="equipo">
+                <h2>Conoce al Equipo</h2>
+                <div class="grid-equipo">
+                    <div class="miembro">
+                        <img src="perfil (1).JPG" alt="Juan Pérez">
+                        <h3>Jeremy Paulino</h3>
+                        <p class="cargo">Fundador & CEO</p>
+                        <p class="bio">Ingeniero de software con 10 años de experiencia en salud digital.</p>
+                        <div class="redes">
+                            <a href="#"><i class='bx bxl-linkedin'></i></a>
+                            <a href="#"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                    </div>
+                    <div class="miembro">
+                        <img src="Marianela-Collado-250-1.jpg" alt="María Gómez">
+                        <h3>María Gómez</h3>
+                        <p class="cargo">Directora Médica</p>
+                        <p class="bio">Médica especializada en telemedicina y gestión hospitalaria.</p>
+                        <div class="redes">
+                            <a href="#"><i class='bx bxl-linkedin'></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sección Valores -->
+        <section class="valores">
+            <h2>Nuestros Valores</h2>
+            <div class="grid-valores">
+                <div class="valor">
+                    <i class='bx bx-shield-alt'></i>
+                    <h3>Seguridad</h3>
+                    <p>Protegemos tus datos médicos con cifrado de última generación.</p>
+                </div>
+                <div class="valor">
+                    <i class='bx bx-accessibility'></i>
+                    <h3>Accesibilidad</h3>
+                    <p>Diseñado para todos, sin barreras tecnológicas.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="menu.js"></script>
+</body>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="miperfil-test.css">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+
+
+<!-- Botón de menú hamburguesa -->
+<button id="menu-toggle" onclick="toggleMenu()">☰</button>
+
+
+
+<!-- ===== Sidebar lateral ===== -->
+<nav id="sidebar" class="sidebar closed">
+    <img src="logo.png" alt="Logo de VeriMed" class="sidebar-logo">
+    <h2>VeriMed</h2>
+    <ul>
+        <li><a href="index-test.html"><i class='bx bx-home'></i> Inicio</a></li>
+        <li><a href="complete.html"><i class='bx bx-user'></i> Completa tu Información</a></li>
+        <li><a href="miperfil-test.html"><i class='bx bx-id-card'></i> Mi Perfil</a></li>
+        <li><a href="sobreNosotros.html"><i class='bx bx-info-circle'></i> Sobre Nosotros</a></li>
+    </ul>
+    <a id="btnCerrarSesion" class="btncerrar" href="login-test.html">
+        <i class='bx bx-log-out'></i> Cerrar sesión
+    </a>
+</nav>
+
+<!-- ------------------------------------boton de compartir----------------------------------------------------- -->
+    <div class="tarjeta-perfil">
+        <div class="encabezado">
+            <h1 class="nombre-usuario" id="nombreUsuario"></h1>
+            <button class="boton-compartir" id="btnCompartir">Compartir Perfil</button>
+        </div>
+<!-- ------------------------------------boton de compar----------------------------------------------------- -->
+        <div class="seccion-datos">
+            <div class="fila-datos">
+                <div class="etiqueta">Número de Teléfono:</div>
+                <div class="valor" id="telefono"></div>
+            </div>
+            
+            
+            <div class="fila-datos">
+                <div class="etiqueta">Cédula:</div>
+                <div class="valor" id="cedulaUsuario"></div>
+            </div>
+            
+            <div class="fila-datos">
+                <div class="etiqueta">Tipo de Seguro:</div>
+                <div class="valor" id="seguroUsuario"></div>
+            </div>
+            
+            <div class="fila-datos">
+                <div class="etiqueta">ID del Seguro:</div>
+                <div class="valor" id="idSeguroUsuario"></div>
+            </div>
+            
+            <div class="fila-datos">
+                <div class="etiqueta">Válido hasta:</div>
+                <div class="valor" id="fechaVencimientoUsuario"></div>
+            </div>
+            
+            <!-- ----------COBERTURA TEXTO------------- -->
+            <div class="fila-datos">
+                <div class="etiqueta  hcobertura">Tu Cobertura</div>
+                <div class="valor" id="coberturaUsuario"></div>
+            </div>
+            <!-- ----------COBERTURA TEXTO------------- -->
+                
+            <!------------------- Sección de coberturas ------------------->
+        <div class="seccion-cobertura">
+                <div class="fila-datos cobertura">
+                    <div class="etiqueta">Doctores disponibles:</div>
+                    <div class="valor" id="doctores"></div>
+                </div>
+                <div class="fila-datos cobertura">
+                    <div class="etiqueta">Medicamentos cubiertos:</div>
+                    <div class="valor" id="medicamentos"></div>
+                </div>
+                <div class="fila-datos cobertura">
+                    <div class="etiqueta">Exámenes incluidos:</div>
+                    <div class="valor" id="examenes"></div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="seccion-notas">
+            <h2 class="titulo-notas">Notas Médicas</h2>
+            <div class="contenido-notas">
+                <!-- Contenido dinámico -->
+                ir al doctor cada 3 meses para consulta rutinaria.
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="miperfil-test.js"></script>
+        <!-- he puesto aqui para que se enlance al otro archivo y asi pueda hacer que funcione el menu -->
+        <script src="menu.js"> </script> 
+</body>
+</html>

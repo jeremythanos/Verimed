@@ -1,0 +1,281 @@
+
+/* ===== Estilos generales ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(foto-bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ----------------------texto de bienvenida--------------------------- */
+
+.bienvenido-title {
+    user-select: none;
+    margin: 60px;
+    font-size: 8rem;
+    padding: 10px;
+    position: relative;
+    background: linear-gradient(
+        45deg,
+        #125c60,
+        #086832,
+        #0061ff,
+        #1d056e
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 4s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        background-position: 100% 50%;
+        filter: hue-rotate(45deg);
+    }
+    100% {
+        background-position: 0% 50%;
+        filter: hue-rotate(0deg);
+    }
+}
+
+@keyframes moveGradient {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+/* ----------------------texto de bienvenida--------------------------- */
+
+
+/* ===== Contenedor principal ===== */
+.container {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+/* ===== Navbar lateral ===== */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: left 0.8s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);;
+}
+
+.sidebar.closed { left: -250px; }
+.sidebar.open { left: 0; }
+
+.sidebar h2 { text-align: center; }
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar ul li { margin: 15px 0; }
+
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover { background-color: #dedede; }
+
+/* ----------------------- Logo -------------------------- */
+.sidebar-logo {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* ===== Botón menú hamburguesa ===== */
+#menu-toggle {
+    display: block;
+    position: fixed;
+    top: 20px;
+    left: 0px;
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
+.sidebar.closed + #menu-toggle { left: 20px; }
+
+/* ------------------- CERRAR SESIÓN -------------------- */
+.btncerrar {
+    color: red;
+    padding: 10px;
+    text-decoration: none;
+    letter-spacing: 0.8px;
+    font-weight: bolder;
+    transition: color 0.7s ease;
+    align-self: flex-start;
+}
+
+.btncerrar:hover { color: darkred; }
+.btncerrar i, .btncerrar box-icon { margin-left: 8px; }
+/* ============= FLIP CARDS Y FOOTER ============= */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.flip-card {
+    perspective: 1000px;
+    height: 180px;
+    width: 260px;
+    margin: 10px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.flip-card-back {
+    background: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+}
+
+.hipaa-img {
+    width: 300px;
+    height: auto;
+}
+
+.btn-iniciar {
+    background: #2e7d32;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-iniciar:hover {
+    background: #1b5e56;
+    transform: scale(1.05);
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    padding: 14px 0;
+    text-align: center;
+    z-index: 100;
+}
+
+.social-icons a {
+    font-size: 26px;
+    margin: 0 15px;
+}
+
+body {
+    padding-bottom: 120px !important;
+}
+
+/* ============= RESPONSIVE ============= */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .flip-card {
+        height: 110px;
+        width: 240px;
+        margin: 10px auto;
+    }
+    
+    .main-footer {
+        position: static;
+        margin-top: 40px;
+    }
+    
+    body {
+        padding-bottom: 0 !important;
+    }
+}
+/* ============= MEDIA QUERIES PARA MÓVILES ============= */
+@media (max-width: 768px) {
+    .bienvenido-title {
+        font-size: 3rem;
+        margin: 30px 20px;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .sidebar { width: 210px;
+                background-color: #ffffffd3;
+        }
+    .sidebar.closed { left: -200px; }
+    .sidebar-logo { width: 180px; }
+
+    #menu-toggle { font-size: 1.2rem; }
+
+    footer{
+        display: none;
+    }
+}
+
+.gmail-link {
+    color: #d44638;
+    font-size: 26px;
+    margin: 0 15px;
+    transition: all 0.3s;
+}
+
+.fb-link {
+    color: #136aad;
+    font-size: 26px;
+    margin: 0 15px;
+    transition: all 0.3s;
+}

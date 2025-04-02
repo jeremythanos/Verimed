@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Completa tu Perfil</title>
+    <link rel="stylesheet" href="complete.css">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+</head>
+<body>   
+
+            <!----------------- Sección Hero ----------->
+            <section class="hero-complete">
+                <h1>Completa tu Perfil</h1>
+                <p>Necesitamos esta información para verificar tu cobertura médica</p>
+                <div class="wave-complete"></div>
+            </section>
+                <!----------------- Sección Hero ----------->
+
+
+<!-- Botón de menú hamburguesa -->
+<button id="menu-toggle" onclick="toggleMenu()">☰</button>
+<img src="" alt="">
+<!------------------------- Sidebar lateral--------------------->
+<nav id="sidebar" class="sidebar closed">
+    <img src="logo.png" alt="Logo de VeriMed" class="sidebar-logo">
+    <h2>VeriMed</h2>
+    <ul>
+        <li><a href="index-test.html"><i class='bx bx-home'></i> Inicio</a></li>
+        <li><a href="complete.html"><i class='bx bx-user'></i> Completa tu Información</a></li>
+        <li><a href="miperfil-test.html"><i class='bx bx-id-card'></i> Mi Perfil</a></li>
+        <li><a href="sobreNosotros.html"><i class='bx bx-info-circle'></i> Sobre Nosotros</a></li>
+    </ul>
+    <a id="btnCerrarSesion" class="btncerrar" href="login-test.html">
+        <i class='bx bx-log-out'></i> Cerrar sesión
+    </a>
+</nav>
+
+
+
+    <!--======================== Contenido Principal ============================= -->
+    <div class="container">
+        <main>
+            <form id="formVerificacion">
+                <div class="form-group">
+                    <label for="nombreCompleto">Nombre Completo</label>
+                    <input type="text" id="nombreCompleto" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Número de Teléfono</label>
+                    <input type="tel" id="telefono" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cedula">Cédula</label>
+                    <input type="text" id="cedula" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="seguro">Tipo de Seguro</label>
+                    <select id="seguro" required>
+                        <option value="">Seleccione su seguro</option>
+                        <option value="humana">Humana</option>
+                        <option value="banreservas">Banreservas</option>
+                        <option value="mapfre">Mapfre</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="idSeguro">ID del Seguro</label>
+                    <input type="text" id="idSeguro" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="fechaVencimiento">Válido hasta</label>
+                    <input type="date" id="fechaVencimiento" required>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class='bx bx-save'></i> Guardar y enviar
+                </button>
+            </form>
+        </main>
+    </div>
+
+    <script src="menu.js"></script>
+    <script type="module" src="complete.js"></script>
+</body>
+</html>

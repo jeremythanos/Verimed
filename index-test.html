@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Boxicons CSS -->
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Pagina de Inicio VeriMed</title>
+    <link rel="stylesheet" href="index-test.css">
+    <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+</head>
+<body>      <button id="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <!-- ===== side'bar lateral ===== -->
+        <!-- Botón de menú hamburguesa -->
+
+
+<!-- ===== Sidebar lateral ===== -->
+<nav id="sidebar" class="sidebar closed">
+    <img src="logo.png" alt="Logo de VeriMed" class="sidebar-logo">
+    <h2>VeriMed</h2>
+    <ul>
+        <li><a href="index-test.html"><i class='bx bx-home'></i> Inicio</a></li>
+        <li><a href="complete.html"><i class='bx bx-user'></i> Completa tu Información</a></li>
+        <li><a href="miperfil-test.html"><i class='bx bx-id-card'></i> Mi Perfil</a></li>
+        <li><a href="sobreNosotros.html"><i class='bx bx-info-circle'></i> Sobre Nosotros</a></li>
+    </ul>
+    <a id="btnCerrarSesion" class="btncerrar" href="login-test.html">
+        <i class='bx bx-log-out'></i> Cerrar sesión
+    </a>
+</nav>
+
+        <!--======================== fin del side-bar ============================= -->
+    <div class="container">
+        
+
+
+        <!-- ================================== Contenido principal ========================================= -->
+        <div class="main-content">
+        
+        <!-- ================================== Contenido principal ========================================= -->
+        <div class="main-content">
+            <h1 class="bienvenido-title">Bienvenido a VeriMed</h1>
+            
+            <!-- Flip Cards -->
+            <div class="cards-container">
+                <!-- Card Registro -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Regístrese ahora!</h3>
+                            <p>Rápido y de forma sencilla!</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="complete.html" class="btn-iniciar">Iniciar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Estadísticas -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Estadísticas de usuarios</h3>
+                            <p>Satisfechos con nuesto servicio!</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <p>Más de 10,000 usuarios registrados</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card HIPAA -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Protegemos tus datos</h3>
+                            <p>Certificación HIPAA</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <img src="hipaa.png" alt="Certificación HIPAA" class="hipaa-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------------------------Footer----------------- -->
+    <footer class="main-footer">
+        <div class="social-icons">
+            <a href="https://www.instagram.com/verimedrd?igsh=NHE2bXE4OTBiOGF4" class="gmail-link"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.facebook.com/share/1JxYygkp1w/" class="fb-link"><i class='bx bxl-facebook'></i></a>
+            <a href="mailto:paulinotav1017@gmail.com?subject=Hola, Soy nuevo usario de VeriMed&body=Hola, Esto es un correo." class="gmail-link">
+                <i class='bx bxl-gmail'></i>
+            </a>
+        </div>
+    </footer>
+        </div>
+    </div>
+
+    <!-- he puesto aqui para que se enlance al otro archivo y asi pueda hacer que funcione el menu -->
+    <script  src="menu.js"> </script> 
+
+</body>
+</html>
